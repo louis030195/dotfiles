@@ -1,2 +1,2 @@
 #!/bin/bash
-cp .tmux.conf .gitignore_global $HOME/.config
+cp .tmux.conf .gitignore $HOME
