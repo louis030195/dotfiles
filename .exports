@@ -4,4 +4,4 @@
 export EDITOR='vim';
 
 # Prompt style fg;txtformat(0, 1, 4);bg
-export PS1="\e[30;0;37m\u@\h \w$ "
+export PS1='\u@\h:\w$ '
