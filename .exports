@@ -5,3 +5,6 @@ export EDITOR='vim';
 
 # Prompt style fg;txtformat(0, 1, 4);bg
 export PS1='\u@\h:\w$ '
+
+# k8s
+export KUBECONFIG=$KUBECONFIG:$HOME/.kube/kubeconfig.yml

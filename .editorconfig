@@ -20,8 +20,8 @@ charset = utf-8
 indent_style = space
 indent_size = 4
 
-# Indentation override for all JS
-[*.js]
+# Indentation override for all JS, java
+[*.{js, java}]
 indent_style = space
 indent_size = 2
 
