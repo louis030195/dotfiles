@@ -1,3 +1,8 @@
 # popcorn-time
 alias pop=/opt/Popcorn-Time/Popcorn-Time
 
+# drawio
+alias draw=$HOME/binaries/*draw.io*.AppImage
+
+# obsidian
+alias obsidian=$HOME/binaries/Obsidian*
