@@ -6,3 +6,6 @@ alias draw=$HOME/binaries/*draw.io*.AppImage
 
 # obsidian
 alias obsidian=$HOME/binaries/Obsidian*
+
+# unity
+alias u3=$HOME/binaries/UnityHub*
