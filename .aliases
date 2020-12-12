@@ -1,8 +1,5 @@
 # popcorn-time
-alias pop=/opt/Popcorn-Time/Popcorn-Time
-
-# drawio
-alias draw=$HOME/binaries/*draw.io*.AppImage
+alias pop=popcorn-time
 
 # obsidian
 alias obsidian=$HOME/binaries/Obsidian*
@@ -10,4 +7,13 @@ alias obsidian=$HOME/binaries/Obsidian*
 # unity
 alias u3=$HOME/binaries/UnityHub*
 
-alias kdash="echo 'Go here !! http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/' && kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}') && kubectl proxy"
+#KDASH_URL="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/"
+#alias kdash="(kubectl version > /dev/null 2>&1 && echo $KDASH_URL && kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}') && kubectl proxy) || echo 'Your k8s cluster isnt running'"
+#
+alias rpi="ssh louis@109.210.246.114"
+alias ksfi="ssh debian@91.121.67.56"
+
+alias k8srpi="export KUBECONFIG=/home/louis/.kube/rpi.yaml"
+alias k8sfi="export KUBECONFIG=/home/louis/.kube/ksfi.yaml"
+
+function kcxbash() { kubectl exec -ti $@ bash; }

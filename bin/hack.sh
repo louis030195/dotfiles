@@ -20,3 +20,5 @@ wget https://github.com/obsidianmd/obsidian-releases/releases/download/v0.8.12/O
 chmod +x $MY_HOME/binaries/Obsidian.AppImage
 wget https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage -O $MY_HOME/binaries/UnityHub.AppImage
 chmod +x $MY_HOME/binaries/UnityHub.AppImage
+
+echo "DON'T FORGET TO INSTALL THE MOST IMPORTANT THING: DOCKER (MANUALLY IS SAFER)"
