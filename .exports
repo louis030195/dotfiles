@@ -7,7 +7,7 @@ export EDITOR='vim';
 export PS1='\u@\h:\w$ '
 
 # k8s
-export KUBECONFIG=$HOME/.kube/ksfi.yaml
+export KUBECONFIG=$HOME/.kube/kubeconfig.yml
 
 # go
 export PATH=$PATH:/usr/local/go/bin
@@ -24,3 +24,7 @@ export PATH=$PATH:$HOME/.arkade/bin/
 
 # Docker (buildx)
 export DOCKER_CLI_EXPERIMENTAL=enabled
+
+export PATH=$PATH:$HOME/binaries/flutter/bin
+export PATH=$PATH:/usr/lib/dart/bin:$HOME/binaries/flutter/.pub-cache/bin
+export ANDROID_HOME=$HOME/Android/Sdk

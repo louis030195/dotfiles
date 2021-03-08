@@ -10,11 +10,7 @@ alias u3=$HOME/binaries/UnityHub*
 #KDASH_URL="http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/"
 #alias kdash="(kubectl version > /dev/null 2>&1 && echo $KDASH_URL && kubectl -n kubernetes-dashboard describe secret $(kubectl -n kubernetes-dashboard get secret | grep admin-user | awk '{print $1}') && kubectl proxy) || echo 'Your k8s cluster isnt running'"
 #
-alias rpi="ssh louis@rpi-louis030195"
 alias ksfi="ssh debian@91.121.67.56"
-
-alias k8srpi="export KUBECONFIG=/home/louis/.kube/rpi.yaml"
-alias k8sfi="export KUBECONFIG=/home/louis/.kube/ksfi.yaml"
 
 function kcxbash() { kubectl exec -ti $@ bash; }
 
@@ -23,3 +19,8 @@ function kcxbash() { kubectl exec -ti $@ bash; }
 function vred() { ffmpeg -i $1 -vcodec libx265 -crf 28 small-$1; }
 # video to markdown-style gif
 #function vgif() { ffmpeg -i $1 -vf "fps=7,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 $2 }
+#
+#
+
+alias myip="python3 -c 'import socket; print([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith(\"127.\")][:1], [[(s.connect((\"8.8.8.8\", 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])'"
+
