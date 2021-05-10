@@ -1,0 +1,40 @@
+apiVersion: helm.cattle.io/v1
+kind: HelmChart
+metadata:
+  name: traefik
+  namespace: kube-system
+spec:
+  chart: https://%{KUBERNETES_API}%/static/charts/traefik-1.81.0.tgz
+  valuesContent: |-
+    rbac:
+      enabled: true
+    ssl:
+      enabled: true
+    metrics:
+      prometheus:
+        enabled: true
+    kubernetes:
+      ingressEndpoint:
+        useDefaultPublishedService: true
+    image: "rancher/library-traefik"
+    tolerations:
+      - key: "CriticalAddonsOnly"
+        operator: "Exists"
+      - key: "node-role.kubernetes.io/master"
+        operator: "Exists"
+        effect: "NoSchedule"
+    acme:
+      enabled: true
+      challengeType: "dns-01"
+      email: louis.beaumont@gmail.com
+      dnsProvider:
+        name: cloudflare  # name of the dns provider to use
+          CLOUDFLARE_EMAIL: louis.beaumont@gmail.com
+          CLOUDFLARE_API_KEY: \\\\\REPLACE_ME\\\\\
+        # the configuration of the dns provider. See the following section for an example
+          # variables that the specific dns provider requires
+      domains:
+        enabled: true
+        domainsList:
+          - main: "*.louis030195.com" # name of the wildcard domain name for the certificate
+
