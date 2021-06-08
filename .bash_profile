@@ -41,4 +41,4 @@ if [ -f /etc/bash_completion  ] && ! shopt -oq posix; then
 fi
 
 # k8s
-# source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package
+source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package

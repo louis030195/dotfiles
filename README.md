@@ -8,10 +8,58 @@ source update.sh
 
 ```bash
 kubectl apply -f letsencrypt-issuer.yaml
+
+```
+
+## openfaas
+
+```bash
 helm install openfaas openfaas/openfaas -n openfaas -f openfaas.yaml
 kubectl describe certificate -n openfaas openfaas-crt
 # openfaas.yaml Replace letsencrypt-staging with letsencrypt-prod
-helm upgrade openfaas -n openfaas --reuse-values -f openfaas.yaml openfaas/openfaas
+helm upgrade openfaas -n openfaas --reuse-values -f values.openfaas.yaml openfaas/openfaas
 PASSWORD=$(kubectl -n openfaas get secret basic-auth -o jsonpath="{.data.basic-auth-password}" | base64 --decode)
 echo "OpenFaaS admin password: $PASSWORD"
+```
+
+### GPU
+
+```bash
+kubectl apply -f- << EOF
+kind: Profile
+apiVersion: openfaas.com/v1
+metadata:
+  name: withgpu
+  namespace: openfaas
+spec:
+    tolerations:
+    - key: "gpu"
+      operator: "Exists"
+      effect: "NoSchedule"
+    affinity:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: gpu
+                operator: In
+                values:
+                - installed
+EOF
+```
+
+
+## jupyterhub
+
+```bash
+# https://zero-to-jupyterhub.readthedocs.io/en/latest/jupyterhub/installation.html
+helm repo add jupyterhub https://jupyterhub.github.io/helm-chart/
+helm repo update
+kubectl create namespace jupyter
+helm upgrade --cleanup-on-fail \
+  --install jupyter jupyterhub/jupyterhub \
+  -n jupyter \
+  -f values.jupyterhub.yaml \
+  --set proxy.secretToken=$(openssl rand -hex 32) \
+  --timeout 3000s
 ```
