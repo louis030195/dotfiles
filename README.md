@@ -14,10 +14,8 @@ kubectl apply -f letsencrypt-issuer.yaml
 ## openfaas
 
 ```bash
-helm install openfaas openfaas/openfaas -n openfaas -f openfaas.yaml
-kubectl describe certificate -n openfaas openfaas-crt
-# openfaas.yaml Replace letsencrypt-staging with letsencrypt-prod
-helm upgrade openfaas -n openfaas --reuse-values -f values.openfaas.yaml openfaas/openfaas
+# Install chart
+helm install openfaas openfaas/openfaas -n openfaas -f values.openfaas.yaml
 PASSWORD=$(kubectl -n openfaas get secret basic-auth -o jsonpath="{.data.basic-auth-password}" | base64 --decode)
 echo "OpenFaaS admin password: $PASSWORD"
 ```
