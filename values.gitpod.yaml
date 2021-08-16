@@ -1,14 +1,7 @@
+rabbitmq:
+  auth:
+    username: louis030195
+    password: no
 minio:
   accessKey: louis030195
-  secretKey: something25
-
-affinity:
-  nodeAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      nodeSelectorTerms:
-        - matchExpressions:
-            - key: kubernetes.io/arch
-              operator: In
-              values:
-                - intel
-                - amd64
+  secretKey: no

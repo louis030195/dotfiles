@@ -9,6 +9,9 @@ function doIt() {
 		--exclude "update.sh" \
 		--exclude "README.md" \
 		--exclude "bin/" \
+		--exclude "*.yaml" \
+		--exclude ".idea" \
+		--exclude ".DS_Store" 
 		-avh --no-perms . ~;
 	source ~/.bashrc;
 }

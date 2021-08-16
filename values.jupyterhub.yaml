@@ -1,3 +1,8 @@
 singleuser:
-  nodeSelector:
-    ARCH: "INTEL"
+  extraNodeAffinity:
+    required: 
+      - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - louis-gb
