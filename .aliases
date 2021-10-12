@@ -36,3 +36,9 @@ codef() {
 }
 
 alias aim="code ~/Documents/ai-marketing-functions/ && code ~/Documents/ai-marketing-front/"
+
+
+# MacOS
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    alias list_ports="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
+fi
