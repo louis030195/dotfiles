@@ -41,5 +41,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     export PATH=/usr/local/share/dotnet:$PATH
     export PATH=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home/bin:$PATH
-    export PATH=$HOME/sdk/go1.16.3/bin:$PATH
+    # ruby
+    export PATH=/opt/homebrew/opt/ruby/bin:$PATH
+    export PATH=/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
 fi

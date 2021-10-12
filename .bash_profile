@@ -42,3 +42,11 @@ fi
 
 # k8s
 source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package
+
+# GCP
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/louisbeaumont/binaries/google-cloud-sdk/path.bash.inc' ]; then . '/Users/louisbeaumont/binaries/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/louisbeaumont/binaries/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/louisbeaumont/binaries/google-cloud-sdk/completion.bash.inc'; fi
+

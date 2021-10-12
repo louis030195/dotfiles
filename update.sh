@@ -11,7 +11,7 @@ function doIt() {
 		--exclude "bin/" \
 		--exclude "*.yaml" \
 		--exclude ".idea" \
-		--exclude ".DS_Store" 
+		--exclude ".DS_Store" \
 		-avh --no-perms . ~;
 	source ~/.bashrc;
 }
