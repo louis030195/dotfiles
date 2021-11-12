@@ -41,8 +41,9 @@ if [ -f /etc/bash_completion  ] && ! shopt -oq posix; then
 fi
 
 # k8s
-source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package
-
+if [ -f kubectl  ]; then
+    source <(kubectl completion bash) # setup autocomplete in bash into the current shell, bash-completion package
+fi
 # GCP
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/louisbeaumont/binaries/google-cloud-sdk/path.bash.inc' ]; then . '/Users/louisbeaumont/binaries/google-cloud-sdk/path.bash.inc'; fi
