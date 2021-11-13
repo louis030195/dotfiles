@@ -1,0 +1,42 @@
+# helm install parlai langa-me/parlai -f values-dev.yaml --create-namespace -n parlai
+# helm uninstall parlai -n parlai
+ingress:
+  enabled: true
+  className: "nginx"
+  hosts:
+    - host: bot.langa.me
+      paths:
+      - path: /websocket
+        backend:
+          serviceName: parlai
+          servicePort: 80
+
+image:
+  repository: louis030195/ava
+  pullPolicy: Always
+  tag: latest-dev
+
+botConfig:
+  tasks:
+    default:
+      onboard_world: MessengerBotAvaOnboardWorld
+      task_world: MessengerBotAvaTaskWorld
+      timeout: 1800
+      agents_required: 1
+  task_name: chatbot
+  world_module: parlai.chat_service.tasks.ava.worlds
+  overworld: MessengerOverworld
+  max_workers: 30
+  opt:
+    debug: True
+    models:
+      blenderbot2_400M:
+        model: projects.blenderbot2.agents.blenderbot2:BlenderBot2FidAgent
+        model_file: zoo:blenderbot2/blenderbot2_400M/model
+        interactive_mode: True
+        no_cuda: False
+        doc_chunk_split_mode: word
+        override:
+          knowledge_access_method: memory_only
+          search_server: None
+          #search_server: 0.0.0.0:8081
