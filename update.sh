@@ -12,6 +12,7 @@ function doIt() {
 		--exclude "*.yaml" \
 		--exclude ".idea" \
 		--exclude ".DS_Store" \
+		--exclude "gpu_cluster" \
 		-avh --no-perms . ~;
 	source ~/.bashrc;
 }
