@@ -9,12 +9,22 @@ kubeAPI: # same as  (where the name would resolve to 127.0.0.1)
   hostIP: "0.0.0.0" # where the Kubernetes API will be listening on
   hostPort: "6443" # where the Kubernetes API listening port will be mapped to on your host system
 image: registry.gitlab.com/vainkop1/k3s-gpu:v1.21.2-k3s1
+ports:
+  - port: 80:80 # same as `--port '80:80@loadbalancer'`
+    nodeFilters:
+      - loadbalancer
+  - port: 443:443
+    nodeFilters:
+      - loadbalancer
+        #- port: 30000-32767:30000-32767
+        # nodeFilters:
+        #- server:*
 options:
   runtime: # runtime (docker) specific options
     gpuRequest: all # same as `--gpus all`
   k3s: # options passed on to K3s itself
     extraArgs: # additional arguments pasised to the `k3s server|agent` command; same as `--k3s-arg`
-      - arg: --tls-san=my.host.domain
+      - arg: "--tls-san=my.host.domain"
         nodeFilters:
           - server:*
 

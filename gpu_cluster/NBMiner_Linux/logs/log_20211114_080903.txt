@@ -1,0 +1,114 @@
+[08:09:03] INFO - ----------------------------------------------
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - |         NBMiner - Crypto GPU Miner         |
+[08:09:03] INFO - |                    39.7                    |
+[08:09:03] INFO - |                                            |
+[08:09:03] INFO - ----------------------------------------------
+[08:09:03] INFO - ------------------- System -------------------
+[08:09:03] INFO - OS:     Ubuntu 20.04.3 LTS, 5.11.0-40-generic
+[08:09:03] INFO - CPU:    Intel(R) Core(TM) i7-10700KF CPU @ 3.80GHz
+[08:09:03] INFO - RAM:    30898 MB / 31977 MB
+[08:09:03] INFO - CU_DRV: 11.5, 495.29.05
+[08:09:03] INFO - ------------------- Config -------------------
+[08:09:03] INFO - ALGO:   ethash
+[08:09:03] INFO - URL:    ethproxy+tcp://eu1-etc.ethermine.org:4444
+[08:09:03] INFO - USER:   0x6cA39bC556132d3880651A3e6c9a5858a615E64D.worker
+[08:09:03] INFO - TEMP:   limit 90C, start 85C
+[08:09:03] INFO - ------------------- Device -------------------
+[08:09:03] INFO -  |ID|PCI|  CC|Memory|CU|
+[08:09:03] INFO - *| 0|  1|  86|10018M|68| NVIDIA GeForce RTX 3080
+[08:09:03] INFO - ----------------------------------------------
+[08:09:03] INFO - ethash - Logging in to eu1-etc.ethermine.org(2606:4700:90:0:7b0a:a6ed:daa3:1411):4444 ...
+[08:09:03] INFO - ethash - Login succeeded.
+[08:09:03] INFO - API:  0.0.0.0:22333
+[08:09:03] INFO - API server started.
+[08:09:03] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: aa560374, HEIGHT: 13927077, DIFF: 4.000G
+[08:09:05] INFO - Device 0 started, Free mem = 9797 MB.
+[08:09:05] INFO - Device 0: 3080, using LHR mode 1, lhr = 74.0
+[08:09:07] INFO - Light cache built, 2.16 s.
+[08:09:09] INFO - Device 0: DAG - Building, EPOCH 464
+[08:09:12] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 31ef30dc, HEIGHT: 13927078, DIFF: 4.000G
+[08:09:16] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 6a23e915, HEIGHT: 13927078, DIFF: 4.000G
+[08:09:17] INFO - Device 0: DAG - Built, 7.88 s.
+[08:09:19] INFO - Device 0: DAG - Verification ok.
+[08:09:20] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 883de40d, HEIGHT: 13927078, DIFF: 4.000G
+[08:09:27] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 7c4c1ce7, HEIGHT: 13927079, DIFF: 4.000G
+[08:09:27] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 94897594, HEIGHT: 13927079, DIFF: 4.000G
+[08:09:34] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:09:34 ===================
+[08:09:34] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:09:34] INFO - | 0|  3080| 61.47 M|     0|     0|  0| 196|  54|    | 31|1110| 9251| 100| 313.6 K|
+[08:09:34] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:09:34] INFO - |    Total: 61.47 M|     0|     0|  0| 196| Uptime:  0D 00:00:30        CPU:  0% |
+[08:09:34] INFO - ==================================================================================
+[08:09:34] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:09:36] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: b1c3448e, HEIGHT: 13927080, DIFF: 4.000G
+[08:09:52] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: d6f41f94, HEIGHT: 13927081, DIFF: 4.000G
+[08:10:04] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:10:04 ===================
+[08:10:04] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:10:04] INFO - | 0|  3080| 63.91 M|     0|     0|  0| 208|  55|    | 31|1110| 9251| 100| 307.2 K|
+[08:10:04] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:10:04] INFO - |    Total: 63.91 M|     0|     0|  0| 208| Uptime:  0D 00:01:00        CPU:  0% |
+[08:10:04] INFO - ==================================================================================
+[08:10:04] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:10:12] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 73616149, HEIGHT: 13927082, DIFF: 4.000G
+[08:10:12] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: f755bd80, HEIGHT: 13927083, DIFF: 4.000G
+[08:10:34] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:10:34 ===================
+[08:10:34] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:10:34] INFO - | 0|  3080| 64.16 M|     0|     0|  0| 196|  56|    | 30|1110| 9251| 100| 327.4 K|
+[08:10:34] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:10:34] INFO - |    Total: 64.16 M|     0|     0|  0| 196| Uptime:  0D 00:01:30        CPU:  0% |
+[08:10:34] INFO - ==================================================================================
+[08:10:34] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:10:43] INFO - ethash - #1 Share rejected: {"error":"Provided PoW solution is invalid!"}, 24 ms. [DEVICE 0, #1]
+[08:10:50] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: fa9e298b, HEIGHT: 13927084, DIFF: 4.000G
+[08:10:51] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: a189ea35, HEIGHT: 13927085, DIFF: 4.000G
+[08:10:59] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 0a4ef454, HEIGHT: 13927086, DIFF: 4.000G
+[08:11:04] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:11:04 ===================
+[08:11:04] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:11:04] INFO - | 0|  3080| 64.23 M|     0|     1|  0| 202|  57|    | 30|1110| 9251| 100| 318.0 K|
+[08:11:04] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:11:04] INFO - |    Total: 64.23 M|     0|     1|  0| 202| Uptime:  0D 00:02:00        CPU:  0% |
+[08:11:04] INFO - ==================================================================================
+[08:11:04] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:11:27] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 79bdb72c, HEIGHT: 13927087, DIFF: 4.000G
+[08:11:34] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:11:34 ===================
+[08:11:34] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:11:34] INFO - | 0|  3080| 63.80 M|     0|     1|  0| 204|  58|    | 31|1110| 9251| 100| 312.7 K|
+[08:11:34] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:11:34] INFO - |    Total: 63.80 M|     0|     1|  0| 204| Uptime:  0D 00:02:30        CPU:  0% |
+[08:11:34] INFO - ==================================================================================
+[08:11:34] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:11:39] INFO - ethash - #2 Share rejected: {"error":"Provided PoW solution is invalid!"}, 25 ms. [DEVICE 0, #2]
+[08:11:43] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 3ae12c30, HEIGHT: 13927088, DIFF: 4.000G
+[08:11:46] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 717c77d2, HEIGHT: 13927089, DIFF: 4.000G
+[08:12:01] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: c45f88ad, HEIGHT: 13927090, DIFF: 4.000G
+[08:12:04] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:12:04 ===================
+[08:12:04] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:12:04] INFO - | 0|  3080| 64.35 M|     0|     2|  0| 197|  58|    | 32|1110| 9251| 100| 326.6 K|
+[08:12:04] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:12:04] INFO - |    Total: 64.35 M|     0|     2|  0| 197| Uptime:  0D 00:03:00        CPU:  0% |
+[08:12:04] INFO - ==================================================================================
+[08:12:04] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:12:06] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 9900e78c, HEIGHT: 13927091, DIFF: 4.000G
+[08:12:08] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: d3cf741a, HEIGHT: 13927092, DIFF: 4.000G
+[08:12:11] INFO - ethash - #3 Share rejected: {"error":"Provided PoW solution is invalid!"}, 25 ms. [DEVICE 0, #3]
+[08:12:16] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: b4534f50, HEIGHT: 13927093, DIFF: 4.000G
+[08:12:20] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 7ce512dd, HEIGHT: 13927094, DIFF: 4.000G
+[08:12:26] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 04b6ea70, HEIGHT: 13927095, DIFF: 4.000G
+[08:12:34] INFO - ================== [nbminer v39.7] Summary 2021-11-14 08:12:34 ===================
+[08:12:34] INFO - |ID|Device|Hashrate|Accept|Reject|Inv|Powr|CTmp|MTmp|Fan|CClk|GMClk|MUtl|Eff/Watt|
+[08:12:34] INFO - | 0|  3080| 63.87 M|     0|     3|  0| 197|  59|    | 35|1110| 9251| 100| 324.2 K|
+[08:12:34] INFO - |------------------+------+------+---+----+--------------------------------------|
+[08:12:34] INFO - |    Total: 63.87 M|     0|     3|  0| 197| Uptime:  0D 00:03:30        CPU:  0% |
+[08:12:34] INFO - ==================================================================================
+[08:12:34] INFO - ethash - On Pool   10m:  0.000    4h:  0.000    24h:  0.000 
+[08:12:42] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 9bcdb2df, HEIGHT: 13927096, DIFF: 4.000G
+[08:12:43] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 8f618301, HEIGHT: 13927097, DIFF: 4.000G
+[08:12:55] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 6e33fb42, HEIGHT: 13927098, DIFF: 4.000G
+[08:13:00] INFO - ethash - New job: eu1-etc.ethermine.org:4444, ID: 2f8e9193, HEIGHT: 13927099, DIFF: 4.000G

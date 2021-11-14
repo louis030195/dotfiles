@@ -1,0 +1,27 @@
+[08:03:19] INFO - ----------------------------------------------
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - |         NBMiner - Crypto GPU Miner         |
+[08:03:19] INFO - |                    39.7                    |
+[08:03:19] INFO - |                                            |
+[08:03:19] INFO - ----------------------------------------------
+[08:03:19] INFO - ------------------- System -------------------
+[08:03:19] INFO - OS:     Ubuntu 20.04.3 LTS, 5.11.0-40-generic
+[08:03:19] INFO - CPU:    Intel(R) Core(TM) i7-10700KF CPU @ 3.80GHz
+[08:03:19] INFO - RAM:    30897 MB / 31977 MB
+[08:03:19] INFO - CU_DRV: 11.5, 495.29.05
+[08:03:19] INFO - ------------------- Config -------------------
+[08:03:19] INFO - ALGO:   ethash
+[08:03:19] INFO - URL:    stratum1+tcp://eth.2miners.com:2020
+[08:03:19] INFO - USER:   0x6cA39bC556132d3880651A3e6c9a5858a615E64D.default
+[08:03:19] INFO - TEMP:   limit 90C, start 85C
+[08:03:19] INFO - ------------------- Device -------------------
+[08:03:19] INFO -  |ID|PCI|  CC|Memory|CU|
+[08:03:19] INFO - *| 0|  1|  86|10018M|68| NVIDIA GeForce RTX 3080
+[08:03:19] INFO - ----------------------------------------------
+[08:03:19] ERROR - Error format URL: stratum1+tcp://eth.2miners.com:2020

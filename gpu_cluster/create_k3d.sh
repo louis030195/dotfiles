@@ -41,15 +41,17 @@ fi
 cp k3d.yml internal_ip.yml
 
 # Change API Endpoint
-sed -i 's/\"0.0.0.0\"/\"'$INTERNAL_IP'\"/g' internal_ip.yml
-sed -i 's/my.host.domain/\"'$EXTERNAL_IP'\"/g' internal_ip.yml
-
-echo "Updated k3d config with my internal IP: $(cat internal_ip.yml), creating k3d cluster now..."
+#sed -i 's/\"0.0.0.0\"/\"'$INTERNAL_IP'\"/g' internal_ip.yml
+sed -i 's/my.host.domain/'$EXTERNAL_IP'/g' internal_ip.yml
+cat internal_ip.yml
+echo "Updated k3d config with my internal IP: $INTERNAL_IP, creating k3d cluster now..."
 
 # Create Cluster
-k3d cluster create --config internal_ip.yml || echo "failed to start k3d" && exit 1
+k3d cluster create --config internal_ip.yml || (echo "failed to start k3d" && exit 1)
 
 rm internal_ip.yml
+
+echo "Get my cluster config like this: 'scp louis@$EXTERNAL_IP:~/.kube/kubeconfig.yml ~/.kube/kubeconfig.yml' then 'sed -i '' 's/0.0.0.0/$EXTERNAL_IP/g' ~/.kube/kubeconfig.yml'"
 
 # Check Cluster Ready
 echo "Starting K3d Cluster"
@@ -60,4 +62,3 @@ endspin
 
 echo "All Resources Ready State!"
 
-echo "Get my cluster config like this: 'scp louis@louis-gpu:/home/louis/.k3d/kubeconfig-basic.yaml ~/.kube/kubeconfig.yml' then 'vim ~/.kube/kubeconfig.yml' and set the server IP to $EXTERNAL_IP"
