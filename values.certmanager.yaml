@@ -1,0 +1,68 @@
+# helm repo add jetstack https://charts.jetstack.io
+# helm repo update
+# helm install cert-manager jetstack/cert-manager -n cert-manager --create-namespace --version v1.6.0 --set installCRDs=true
+# helm -n cert-manager delete cert-manager
+# kubectl apply -f ./values.certmanager.yaml
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-staging
+  namespace: cert-manager
+spec:
+  acme:
+    # You must replace this email address with your own.
+    # Let's Encrypt will use this to contact you about expiring
+    # certificates, and issues related to your account.
+    email: louis.beaumont@gmail.com
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      # Secret resource used to store the account's private key.
+      name: awesome-key
+    # Add a single challenge solver, HTTP01 using nginx
+    solvers:
+      - http01:
+          ingress:
+            class: traefik
+      - dns01:
+          cloudflare:
+            email: louis.beaumont@gmail.com
+            apiKeySecretRef:
+              name: cloudflare-apikey-secret
+              key: 9d0b58c47540061f082e0ab220cc62dbc5807
+        selector:
+          dnsNames:
+          - 'gitpod.louis030195.com'
+          - '*.gitpod.louis030195.com'
+          - '*.ws.gitpod.louis030195.com'
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+  namespace: cert-manager
+spec:
+  acme:
+    # You must replace this email address with your own.
+    # Let's Encrypt will use this to contact you about expiring
+    # certificates, and issues related to your account.
+    email: louis.beaumont@gmail.com
+    server: https://acme-v02.api.letsencrypt.org/directory
+    privateKeySecretRef:
+      # Secret resource used to store the account's private key.
+      name: awesome-key
+    # Add a single challenge solver, HTTP01 using nginx
+    solvers:
+      - http01:
+          ingress:
+            class: traefik
+      - dns01:
+          cloudflare:
+            email: louis.beaumont@gmail.com
+            apiKeySecretRef:
+              name: cloudflare-apikey-secret
+              key: 9d0b58c47540061f082e0ab220cc62dbc5807
+        selector:
+          dnsNames:
+          - 'gitpod.louis030195.com'
+          - '*.gitpod.louis030195.com'
+          - '*.ws.gitpod.louis030195.com'
