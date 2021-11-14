@@ -314,12 +314,10 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
-# shell:
-#   program: /bin/bash
-#   args:
-#     - -c tmux && bash
+#shell:
+#  program: /bin/bash -c (tmux attach || tmux) && bash
 shell:
-  program: /bin/bash
+  program: /opt/homebrew/bin/bash
   args:
     - -l
     - -c

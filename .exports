@@ -49,6 +49,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
     export LDFLAGS="-L/opt/homebrew/opt/python@3.8/lib"
     export PKG_CONFIG_PATH="/opt/homebrew/opt/python@3.8/lib/pkgconfig"
+    # https://apple.stackexchange.com/questions/371997/suppressing-the-default-interactive-shell-is-now-zsh-message-in-macos-catalina
+    export BASH_SILENCE_DEPRECATION_WARNING=1
 
 fi
 
