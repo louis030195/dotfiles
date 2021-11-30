@@ -18,7 +18,7 @@ ports:
       - loadbalancer
         #- port: 30000-32767:30000-32767
         # nodeFilters:
-        #- server:*
+        #- loadbalancer
 options:
   runtime: # runtime (docker) specific options
     gpuRequest: all # same as `--gpus all`
