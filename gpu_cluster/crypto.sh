@@ -7,7 +7,7 @@
 #ADDR="17YnysY1Vz99VgkQoUdmjDruUtx1ogpFyX"
 # COINBASE
 ADDR="3BF8sF7wMPtjKZPnhdCfDswKgWNt3sJrH2"
-./t-rex -a ethash -o stratum+tcp://eth.2miners.com:2020 -u "$ADDR"  --lhr-autotune-mode full --api-bind-http "0.0.0.0:4067"
+./t-rex -a ethash -o stratum+tcp://eth.2miners.com:2020 -u "$ADDR"  --lhr-autotune-mode full
 
 
 # 62 mhs 0.7% fee

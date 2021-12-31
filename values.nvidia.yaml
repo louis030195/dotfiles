@@ -1,3 +1,0 @@
-# helm repo add gpu-helm-charts https://nvidia.github.io/dcgm-exporter/helm-charts
-# helm repo update
-# helm install nvidia gpu-helm-charts/dcgm-exporter -n nvidia --create-namespace
