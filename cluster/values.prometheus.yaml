@@ -1,23 +1,26 @@
+# helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+# helm repo update
 # helm install prom prometheus-community/kube-prometheus-stack -f ./values.prometheus.yaml -n prometheus --create-namespace
+# kubectl --namespace prometheus port-forward svc/grafana 3000
 # helm upgrade prom prometheus-community/kube-prometheus-stack -f ./values.prometheus.yaml -n prometheus
 # helm uninstall prom -n prometheus
-grafana:
-  ingress:
-    enabled: true
+# grafana:
+  # ingress:
+    # enabled: false
     # className: "traefik"
-    annotations:
-      kubernetes.io/ingress.class: traefik
-      kubernetes.io/tls-acme: "true"
-    hosts:
-      - k8s.louis030195.com
-    path: / #/grafana
+    # annotations:
+      # kubernetes.io/ingress.class: traefik
+      # kubernetes.io/tls-acme: "true"
+    # hosts:
+      # - k8s.louis030195.com
+    # path: /grafana
     ## TLS configuration for grafana Ingress
     ## Secret must be manually created in the namespace
     ##
-    tls:
-      - secretName: awesome-key
-        hosts:
-        - k8s.louis030195.com
+    # tls:
+    #   - secretName: awesome-key
+    #     hosts:
+    #     - k8s.louis030195.com
   # TODO
   # grafana.ini:
   # smtp:
