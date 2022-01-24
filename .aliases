@@ -11,3 +11,6 @@ alias myip="python3 -c 'import socket; print([l for l in ([ip for ip in socket.g
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias list_ports="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
 fi
+
+alias k="kubectl"
+complete -F __start_kubectl k
