@@ -55,7 +55,6 @@ EOF
 
 echo "Waiting for pod to be ready..."
 
-sleep infinity
 # Wait for the pod to be running
 OK=$(kubectl wait --for=condition=Ready pod/hello-world --timeout=120s || true)
 if [ "$OK" != "pod/hello-world condition met" ]; then
