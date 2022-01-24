@@ -1,0 +1,13 @@
+# execute the manifest gpu-further.yaml with kubectl
+# kubectl apply -f gpu-further.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: gpu-pod
+spec:
+  containers:
+    - name: digits-container
+      image: nvcr.io/nvidia/digits:20.12-tensorflow-py3
+      resources:
+        limits:
+          nvidia.com/gpu: 1 # requesting 2 GPUs

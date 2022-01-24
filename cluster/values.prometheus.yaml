@@ -4,7 +4,24 @@
 # kubectl --namespace prometheus port-forward svc/grafana 3000
 # helm upgrade prom prometheus-community/kube-prometheus-stack -f ./values.prometheus.yaml -n prometheus
 # helm uninstall prom -n prometheus
-# grafana:
+grafana:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - raspberrypi
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - raspberrypi
   # ingress:
     # enabled: false
     # className: "traefik"
@@ -71,3 +88,23 @@ additionalScrapeConfigs:
 ## which will also match the servicemonitors created
 ##
 serviceMonitorSelectorNilUsesHelmValues: false
+
+
+prometheusOperator:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - raspberrypi
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 1
+        preference:
+          matchExpressions:
+          - key: kubernetes.io/hostname
+            operator: In
+            values:
+            - raspberrypi

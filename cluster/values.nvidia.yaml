@@ -1,11 +1,13 @@
 # helm repo add gpu-helm-charts https://nvidia.github.io/dcgm-exporter/helm-charts
 # helm repo update
 # helm install dcgm-exporter gpu-helm-charts/dcgm-exporter -n nvidia --create-namespace -f values.nvidia.yaml
+# helm upgrade dcgm-exporter gpu-helm-charts/dcgm-exporter -n nvidia --create-namespace -f values.nvidia.yaml
 # helm uninstall dcgm-exporter -n nvidia
 
 # helm repo add nvdp https://nvidia.github.io/k8s-device-plugin
 # helm repo update
-# helm install nvidia-device-plugin nvdp/nvidia-device-plugin -n nvidia --create-namespace -f values.nvidia.yaml
+# helm install nvidia-device-plugin nvdp/nvidia-device-plugin -f values.nvidia.yaml
+# helm upgrade nvidia-device-plugin nvdp/nvidia-device-plugin -f values.nvidia.yaml
 # helm uninstall nvidia-device-plugin -n nvidia
 affinity:
   nodeAffinity:
@@ -16,7 +18,7 @@ affinity:
           operator: In
           values:
           - gpu2
-          # - louis-gpu # TODO
+          - louis-gpu # TODO
     preferredDuringSchedulingIgnoredDuringExecution:
     - weight: 1
       preference:
@@ -25,4 +27,4 @@ affinity:
           operator: In
           values:
           - gpu2
-          # - louis-gpu
+          - louis-gpu
