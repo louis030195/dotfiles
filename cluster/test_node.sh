@@ -5,12 +5,12 @@
 
 set -e
 
-# trap ctrl-c and call ctrl_c()
 trap clean_up INT
 
 function clean_up() {
   echo "Cleaning up..."
-  kubectl delete pod hello-world && exit 0
+  kubectl delete pod hello-world
+  exit 1
 }
 
 # Ask the user the node hostname to use and write it to NODE_NAME variable
@@ -21,9 +21,9 @@ read -p "Is this a gpu node? [y/N] " IS_GPU
 
 IMAGE="hello-world"
 NB_GPU="0"
-# if GPU use nvidia/cuda:11.4.1-base-ubuntu20.04
+
 if [ "$IS_GPU" = "y" ]; then
-  IMAGE="nvidia/cuda:11.4.1-base-ubuntu20.04"
+  IMAGE="nvidia/cuda:11.5.0-base-ubuntu20.04"
   NB_GPU="1"
 fi
 

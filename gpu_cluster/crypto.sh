@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# TAO
+# btcli run --subtensor.network nakamoto --wallet.name louis030195 --wallet.hotkey louis030195-hotkey --neuron.use_wandb --wandb.api_key e49b20882d952b735ec40189c638bcc155fcdf81
+
 # ETH
 #ADDR="0x6cA39bC556132d3880651A3e6c9a5858a615E64D"
 # BTC
