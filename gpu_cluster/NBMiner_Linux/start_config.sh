@@ -1,1 +1,0 @@
-./nbminer -c config.json

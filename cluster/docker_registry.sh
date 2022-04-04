@@ -96,7 +96,8 @@ spec:
   containers:
   - name: hello-world
     image: ${DOCKER_SERVER}/${PROJECT_ID}/hello-world
-    command: ["/hello"]
+    command: [ "/bin/bash", "-c", "--" ]
+    args: [ "while true; do sleep 30; done;" ]
 EOF
 
 # Wait for the pod to be running

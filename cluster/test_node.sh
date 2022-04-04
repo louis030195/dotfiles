@@ -19,7 +19,7 @@ read -p "What node hostname do you want to use? " NODE_NAME
 # Ask the user if it's a gpu node and check if it works
 read -p "Is this a gpu node? [y/N] " IS_GPU
 
-IMAGE="hello-world"
+IMAGE="ubuntu"
 NB_GPU="0"
 
 if [ "$IS_GPU" = "y" ]; then
@@ -37,7 +37,7 @@ spec:
     containers:
     - name: hello-world
       image: ${IMAGE}
-      command: [ "/bin/bash", "-c", "--" ]
+      command: [ "bash", "-c", "--" ]
       args: [ "while true; do sleep 30; done;" ]
       resources:
         limits:
