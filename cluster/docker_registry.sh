@@ -76,7 +76,7 @@ kubectl patch serviceaccount default \
   -p "{\"imagePullSecrets\": [{\"name\": \"${SECRET_NAME}\"}]}" \
   --namespace=${NAMESPACE}
 
-echo " You can now use the secret ${SECRET_NAME} to pull images from gcr.io"
+echo " You can now use the secret ${SECRET_NAME} to pull images from this registry"
 
 # Test the registry
 # Push a basic image to the registry
