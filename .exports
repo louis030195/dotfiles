@@ -29,6 +29,9 @@ export PATH=$PATH:$HOME/binaries/flutter/bin
 export PATH=$PATH:/usr/lib/dart/bin:$HOME/binaries/flutter/.pub-cache/bin
 export ANDROID_HOME=$HOME/Android/Sdk
 
+
+
+
 # MacOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
@@ -53,6 +56,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export BASH_SILENCE_DEPRECATION_WARNING=1
     # gnu sed on mac https://gist.github.com/andre3k1/e3a1a7133fded5de5a9ee99c87c6fa0d
     export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+    # linkerd
+    export PATH=$PATH:/Users/louisbeaumont/.linkerd2/bin
 else
     # Linux GPU
     gpu=$(lspci || "no gpu" | grep -i '.* vga .* nvidia .*')

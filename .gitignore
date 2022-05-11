@@ -1,10 +1,2 @@
-# JetBrains
-.idea
-
-# Python
-venv
-.ipynb_checkpoints
-
-.DS_*
-
-k8s-gcr*
+# should only be related to my kind of habits stuff file
+*svc*.json
