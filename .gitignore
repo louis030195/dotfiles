@@ -1,2 +1,4 @@
 # should only be related to my kind of habits stuff file
 *svc*.json
+values.dev.yaml
+values.prod.yaml
