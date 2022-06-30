@@ -1,5 +1,5 @@
 alias ssh-rpi="ssh pi@raspberrypi"
-alias ssh-gpu="ssh gpu@86.211.246.69"
+alias ssh-gpu="ssh gpu@91.175.184.114 -p 49512"
 alias ssh-gpu2="ssh louis@gpu2"
 
 function kcxbash() { kubectl exec -ti $@ bash; }

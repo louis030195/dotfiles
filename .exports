@@ -36,9 +36,6 @@ export ANDROID_HOME=$HOME/Android/Sdk
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     eval "$(/opt/homebrew/bin/brew shellenv)"
-    export NVM_DIR="$HOME/.nvm"
-    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
     export ANDROID_HOME=$HOME/Library/Android/sdk/
     export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
