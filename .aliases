@@ -35,3 +35,22 @@ function dev() {
         gcloud config set project langame-dev >/dev/null
     fi
 }
+
+# TODO: make this work
+# function giffify() {
+#     movie=$1
+#     # output is [date].gif
+#     output=$(date +"%Y-%m-%d-%H-%M-%S").gif
+#     height=$(mdls -name kMDItemPixelHeight ${movie} | grep -o '[0-9]\+')
+#     width=$(mdls -name kMDItemPixelWidth ${movie} | grep -o '[0-9]\+')
+#     dimensions="${width}x${height}"
+#     ffmpeg -i "${movie}" -s ${dimensions} -pix_fmt rgb24 -r 10 -f gif ${movie}.gif
+# }
+
+function yolo_commit() {
+    git add .
+    # random emoji
+    emoji=$(curl -s https://api.github.com/emojis | jq -r 'keys | .[]' | shuf -n 1)
+    git commit -m ":${emoji}:"
+    git push
+}
