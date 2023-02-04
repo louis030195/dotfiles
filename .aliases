@@ -5,6 +5,9 @@ alias myip="python3 -c 'import socket; print([l for l in ([ip for ip in socket.g
 # MacOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
     alias list_ports="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
+    # brew install bash-completion
+    [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+    alias go_to_code="cd \"/Users/louisbeaumont/Library/Mobile Documents/com~apple~CloudDocs/Documents\""
 fi
 
 alias k="kubectl"
@@ -54,3 +57,5 @@ function yolo_commit() {
     git commit -m ":${emoji}:"
     git push
 }
+
+alias yaml2json="python3 -c 'import json, sys, yaml;from yaml import CSafeLoader as sl; y=yaml.load(sys.stdin.read(), Loader=sl) ; json.dump(y, sys.stdout)' && echo"
