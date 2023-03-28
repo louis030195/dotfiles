@@ -32,6 +32,7 @@ export ANDROID_HOME=$HOME/Android/Sdk
 
 
 
+
 # MacOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
@@ -55,6 +56,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
     # linkerd
     export PATH=$PATH:/Users/louisbeaumont/.linkerd2/bin
+
+    export PATH="/Users/louisbeaumont/.deta/bin:$PATH"
 else
     # Linux GPU
     gpu=$(lspci || "no gpu" | grep -i '.* vga .* nvidia .*')
