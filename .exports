@@ -19,17 +19,8 @@ export PATH=$PATH:$HOME/binaries
 # Rust
 export PATH=$PATH:$HOME/.cargo/bin
 
-# Arkade
-export PATH=$PATH:$HOME/.arkade/bin/
-
 # Docker (buildx)
 export DOCKER_CLI_EXPERIMENTAL=enabled
-
-export PATH=$PATH:$HOME/binaries/flutter/bin
-export PATH=$PATH:/usr/lib/dart/bin:$HOME/binaries/flutter/.pub-cache/bin
-export ANDROID_HOME=$HOME/Android/Sdk
-
-
 
 
 
@@ -37,15 +28,6 @@ export ANDROID_HOME=$HOME/Android/Sdk
 if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="/opt/homebrew/bin:$PATH"
     eval "$(/opt/homebrew/bin/brew shellenv)"
-
-    export ANDROID_HOME=$HOME/Library/Android/sdk/
-    export PATH=$HOME/Library/Android/sdk/platform-tools:$PATH
-
-    export PATH=/usr/local/share/dotnet:$PATH
-    export PATH=/Applications/Android\ Studio.app/Contents/jre/jdk/Contents/Home/bin:$PATH
-    # ruby
-    export PATH=/opt/homebrew/opt/ruby/bin:$PATH
-    export PATH=/opt/homebrew/lib/ruby/gems/3.0.0/bin:$PATH
 
     export PATH="/opt/homebrew/opt/python@3.8/bin:$PATH"
     export LDFLAGS="-L/opt/homebrew/opt/python@3.8/lib"
@@ -58,6 +40,9 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH=$PATH:/Users/louisbeaumont/.linkerd2/bin
 
     export PATH="/Users/louisbeaumont/.deta/bin:$PATH"
+
+    export DENO_INSTALL="/Users/louisbeaumont/.deno"
+    export PATH="$DENO_INSTALL/bin:$PATH"
 else
     # Linux GPU
     gpu=$(lspci || "no gpu" | grep -i '.* vga .* nvidia .*')

@@ -14,11 +14,7 @@ cargo install alacritty
 
 mkdir $MY_HOME/binaries || true
 cp .tmux.conf .gitignore .alacritty.yml $MY_HOME
-wget https://github.com/jgraph/drawio-desktop/releases/download/v13.6.2/draw.io-x86_64-13.6.2.AppImage -O $MY_HOME/binaries/draw.io.AppImage
-chmod +x $MY_HOME/binaries/draw.io.AppImage
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v0.8.12/Obsidian-0.8.12.AppImage -O $MY_HOME/binaries/Obsidian.AppImage
 chmod +x $MY_HOME/binaries/Obsidian.AppImage
-wget https://public-cdn.cloud.unity3d.com/hub/prod/UnityHub.AppImage -O $MY_HOME/binaries/UnityHub.AppImage
-chmod +x $MY_HOME/binaries/UnityHub.AppImage
 
 echo "DON'T FORGET TO INSTALL THE MOST IMPORTANT THING: DOCKER (MANUALLY IS SAFER)"
