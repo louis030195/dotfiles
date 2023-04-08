@@ -5,6 +5,7 @@ cd "$(dirname "${BASH_SOURCE}")";
 git pull origin master;
 
 function doIt() {
+	# TODO fix
 	rsync --exclude ".git/" \
 		--exclude "update.sh" \
 		--exclude "README.md" \
@@ -12,7 +13,6 @@ function doIt() {
 		--exclude "*.yaml" \
 		--exclude ".idea" \
 		--exclude ".DS_Store" \
-		--exclude "gpu_cluster" \
 		-avh --no-perms . ~;
 	source ~/.bashrc;
 }
