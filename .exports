@@ -43,6 +43,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
 
     export DENO_INSTALL="/Users/louisbeaumont/.deno"
     export PATH="$DENO_INSTALL/bin:$PATH"
+    export PATH="/Users/louisbeaumont/Library/Python/3.10/bin:$PATH"
 else
     # Linux GPU
     gpu=$(lspci || "no gpu" | grep -i '.* vga .* nvidia .*')

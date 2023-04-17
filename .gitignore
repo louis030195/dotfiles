@@ -4,3 +4,6 @@ values.dev.yaml
 values-dev.yaml
 values.prod.yaml
 values-prod.yaml
+.env.local
+.env.development
+.env
