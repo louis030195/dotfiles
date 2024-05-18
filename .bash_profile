@@ -51,3 +51,9 @@ if [ -f '/Users/louisbeaumont/binaries/google-cloud-sdk/path.bash.inc' ]; then .
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/louisbeaumont/binaries/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/louisbeaumont/binaries/google-cloud-sdk/completion.bash.inc'; fi
 
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+export PNPM_HOME="$HOME/.pnpm-global"
+export PATH="$PNPM_HOME:$PATH"
+

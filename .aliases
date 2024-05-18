@@ -59,3 +59,6 @@ function yolo_commit() {
 }
 
 alias yaml2json="python3 -c 'import json, sys, yaml;from yaml import CSafeLoader as sl; y=yaml.load(sys.stdin.read(), Loader=sl) ; json.dump(y, sys.stdout)' && echo"
+
+alias git-backup="git branch backup-$(date +'%Y-%m-%d-%H-%M-%S')"
+
