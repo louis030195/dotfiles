@@ -5,3 +5,5 @@ values-dev.yaml
 values.prod.yaml
 values-prod.yaml
 .env*
+
+*.DS_Store*
