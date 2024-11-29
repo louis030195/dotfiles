@@ -532,17 +532,18 @@ key_bindings:
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
 
   # https://github.com/alacritty/alacritty/issues/1349#issuecomment-450750384
-  - { key: Equals, mods: Command, action: DecreaseFontSize }
-  - { key: Slash, mods: Command, action: IncreaseFontSize }
-  - { key: A, mods: Command, action: Quit }
-  - { key: Z, mods: Command, action: Quit }
-  - { key: Key5, mods: Alt, chars: "{" }
-  - { key: Minus, mods: Alt, chars: "}" }
-  - { key: Key5, mods: Alt|Shift, chars: "[" }
-  - { key: Minus, mods: Alt|Shift, chars: "]" }
-  - { key: N, mods: Alt, chars: "~" }
-  - { key: Period, mods: Alt|Shift, chars: "\\" }
-  - { key: 37, mods: Alt|Shift, chars: "|" }
+  # - { key: Equals, mods: Command, action: DecreaseFontSize }
+  # - { key: Slash, mods: Command, action: IncreaseFontSize }
+  # - { key: A, mods: Command, action: Quit }
+  # - { key: Z, mods: Command, action: Quit }
+  # Removing German keyboard specific bindings:
+  # - { key: Key5, mods: Alt, chars: "{" }
+  # - { key: Minus, mods: Alt, chars: "}" }
+  # - { key: Key5, mods: Alt|Shift, chars: "[" }
+  # - { key: Minus, mods: Alt|Shift, chars: "]" }
+  # - { key: N, mods: Alt, chars: "~" }
+  # - { key: Period, mods: Alt|Shift, chars: "\\" }
+  # - { key: 37, mods: Alt|Shift, chars: "|" }
 
   - { key: B, mods: Alt, chars: "\x1bb" }
   - { key: F, mods: Alt, chars: "\x1bf" }
