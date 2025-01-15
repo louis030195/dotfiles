@@ -1,4 +1,3 @@
-function kcxbash() { kubectl exec -ti $@ bash; }
 
 alias myip="python3 -c 'import socket; print([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith(\"127.\")][:1], [[(s.connect((\"8.8.8.8\", 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])'"
 
@@ -9,46 +8,6 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     [[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
     alias go_to_code="cd \"/Users/louisbeaumont/Library/Mobile Documents/com~apple~CloudDocs/Documents\""
 fi
-
-alias k="kubectl"
-complete -F __start_kubectl k
-
-function prod() {
-    # if current gcloud service account is louis@inkdrop.ai
-    if [[ $(gcloud config get-value account) == "louis@inkdrop.ai" ]]; then
-        gcloud config set project ai-marketing-978d9 >/dev/null
-    # else if current gcloud service account is louis.beaumont@gmail.com
-    elif [[ $(gcloud config get-value account) == "louis.beaumont@gmail.com" ]]; then
-        gcloud config set project louis030195-256110 >/dev/null
-    # else if louis@langa.me
-    elif [[ $(gcloud config get-value account) == "louis@langa.me" ]]; then
-        gcloud config set project langame-86ac4 >/dev/null
-    fi
-}
-
-function dev() {
-    # if current gcloud service account is louis@inkdrop.ai
-    if [[ $(gcloud config get-value account) == "louis@inkdrop.ai" ]]; then
-        gcloud config set project ai-marketing-dev >/dev/null
-    # else if current gcloud service account is louis.beaumont@gmail.com
-    elif [[ $(gcloud config get-value account) == "louis.beaumont@gmail.com" ]]; then
-        gcloud config set project louis030195-256110 >/dev/null
-    # else if louis@langa.me
-    elif [[ $(gcloud config get-value account) == "louis@langa.me" ]]; then
-        gcloud config set project langame-dev >/dev/null
-    fi
-}
-
-# TODO: make this work
-# function giffify() {
-#     movie=$1
-#     # output is [date].gif
-#     output=$(date +"%Y-%m-%d-%H-%M-%S").gif
-#     height=$(mdls -name kMDItemPixelHeight ${movie} | grep -o '[0-9]\+')
-#     width=$(mdls -name kMDItemPixelWidth ${movie} | grep -o '[0-9]\+')
-#     dimensions="${width}x${height}"
-#     ffmpeg -i "${movie}" -s ${dimensions} -pix_fmt rgb24 -r 10 -f gif ${movie}.gif
-# }
 
 function yolo_commit() {
     git add .

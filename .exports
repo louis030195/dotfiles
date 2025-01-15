@@ -6,13 +6,6 @@ export EDITOR='vim';
 # Prompt style fg;txtformat(0, 1, 4);bg
 export PS1='\u@\h:\w$ '
 
-# k8s
-export KUBECONFIG=$HOME/.kube/kubeconfig.yml
-
-# go
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:$HOME/go/bin
-
 # Binaries
 export PATH=$PATH:$HOME/binaries
 
@@ -21,8 +14,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 
 # Docker (buildx)
 export DOCKER_CLI_EXPERIMENTAL=enabled
-
-
 
 # MacOS
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -36,19 +27,10 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export BASH_SILENCE_DEPRECATION_WARNING=1
     # gnu sed on mac https://gist.github.com/andre3k1/e3a1a7133fded5de5a9ee99c87c6fa0d
     export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-    # linkerd
-    export PATH=$PATH:/Users/louisbeaumont/.linkerd2/bin
-
-    export PATH="/Users/louisbeaumont/.deta/bin:$PATH"
-
-    export DENO_INSTALL="/Users/louisbeaumont/.deno"
-    export PATH="$DENO_INSTALL/bin:$PATH"
-    export PATH="/Users/louisbeaumont/Library/Python/3.10/bin:$PATH"
 
     export PKG_CONFIG_PATH="/opt/homebrew/lib/pkgconfig/:$PKG_CONFIG_PATH"
 
-    # cargo
-    export PATH="/Users/louisbeaumont/.cargo/bin:$PATH"
+    export PATH="/Users/louisbeaumont/.bun/bin:$PATH"
 else
     # Linux GPU
     gpu=$(lspci || "no gpu" | grep -i '.* vga .* nvidia .*')
