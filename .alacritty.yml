@@ -547,6 +547,7 @@ key_bindings:
 
   - { key: B, mods: Alt, chars: "\x1bb" }
   - { key: F, mods: Alt, chars: "\x1bf" }
+  - { key: N, mods: Alt, chars: "~" }
 
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }
