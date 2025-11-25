@@ -1,0 +1,12 @@
+# Personal
+louis030195/brain
+
+# Mediar core
+mediar-ai/terminator
+mediar-ai/mediar-web-app
+mediar-ai/mediar-app
+mediar-ai/agents
+mediar-ai/workflows
+
+# Other useful
+mediar-ai/mediar-website

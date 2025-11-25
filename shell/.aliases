@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Git shortcuts
+alias g="git"
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gl="git log --oneline -20"
+alias git-backup="git branch backup-\$(date +'%Y-%m-%d-%H-%M-%S')"
+
+# Quick commit
+function yolo_commit() {
+    git add .
+    git commit -m "."
+    git push
+}
+
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias docs="cd ~/Documents"
+
+# Utils
+alias yaml2json="python3 -c 'import json, sys, yaml; y=yaml.safe_load(sys.stdin.read()); json.dump(y, sys.stdout)' && echo"
+
+# OS-specific
+case "$(uname -s)" in
+    Darwin)
+        alias list_ports="netstat -anvp tcp | awk 'NR<3 || /LISTEN/'"
+        [[ -r "$(brew --prefix 2>/dev/null)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+        ;;
+    MINGW*|MSYS*|CYGWIN*)
+        alias list_ports="netstat -an | findstr LISTEN"
+        alias open="start"
+        alias explorer="explorer.exe"
+        ;;
+    Linux)
+        alias list_ports="ss -tuln"
+        alias open="xdg-open"
+        ;;
+esac

@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+# Editor
+export EDITOR='vim'
+
+# Prompt
+export PS1='\u@\h:\w$ '
+
+# Common paths
+export PATH="$HOME/bin:$HOME/binaries:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# Docker
+export DOCKER_CLI_EXPERIMENTAL=enabled
+
+# OS-specific
+case "$(uname -s)" in
+    Darwin)
+        # macOS
+        export PATH="/opt/homebrew/bin:$PATH"
+        [ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+        export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+        export BASH_SILENCE_DEPRECATION_WARNING=1
+        export PATH="$HOME/.bun/bin:$PATH"
+        ;;
+    MINGW*|MSYS*|CYGWIN*)
+        # Windows (Git Bash / MSYS2)
+        export PATH="/c/msys64/ucrt64/bin:$PATH"
+        export PATH="/c/Program Files/nodejs:$PATH"
+        export PATH="$APPDATA/npm:$PATH"
+        ;;
+    Linux)
+        # Linux - CUDA if nvidia
+        if command -v nvidia-smi &> /dev/null; then
+            export PATH="/usr/local/cuda/bin:$PATH"
+            export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+        fi
+        ;;
+esac
