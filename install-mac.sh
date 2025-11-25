@@ -16,7 +16,7 @@ echo "Installing apps via Homebrew..."
 brew install git node rustup-init bash python gh helix
 
 # Apps
-brew install --cask wezterm zed cursor claude obsidian discord slack google-chrome tailscale
+brew install --cask wezterm zed cursor claude obsidian google-chrome 
 
 # Initialize rust
 rustup-init -y 2>/dev/null || true
