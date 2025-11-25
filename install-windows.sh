@@ -27,10 +27,6 @@ if command -v winget &> /dev/null; then
     winget install --id=GitHub.cli -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     
     # Utils
-    winget install --id=tailscale.tailscale -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
-    winget install --id=Obsidian.Obsidian -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
-    winget install --id=Discord.Discord -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
-    winget install --id=SlackTechnologies.Slack -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Google.Chrome -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
 else
     echo "winget not found - install Windows App Installer from Microsoft Store"
