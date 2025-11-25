@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Editor
-export EDITOR='vim'
+export EDITOR='hx'
 
 # Prompt
 export PS1='\u@\h:\w$ '
