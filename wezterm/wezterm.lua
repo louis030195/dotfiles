@@ -5,8 +5,8 @@ local config = wezterm.config_builder()
 config.font = wezterm.font('JetBrains Mono')
 config.font_size = 11.0
 
--- Color scheme
-config.color_scheme = 'Dracula'
+-- Color scheme - light mode
+config.color_scheme = 'One Light (Gogh)'
 
 -- Window
 config.window_padding = { left = 4, right = 4, top = 4, bottom = 4 }
@@ -17,7 +17,7 @@ local is_windows = wezterm.target_triple:find('windows') ~= nil
 local is_macos = wezterm.target_triple:find('darwin') ~= nil
 
 if is_windows then
-    config.default_prog = { 'C:/msys64/msys2_shell.cmd', '-defterm', '-here', '-no-start', '-ucrt64', '-shell', 'bash' }
+    config.default_prog = { 'C:/Program Files/Git/bin/bash.exe', '-l' }
 elseif is_macos then
     config.default_prog = { '/opt/homebrew/bin/bash', '-l' }
 else
