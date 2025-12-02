@@ -24,11 +24,23 @@ else
     config.default_prog = { '/bin/bash', '-l' }
 end
 
--- Keybindings
-config.keys = {
-    { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
-    { key = 'd', mods = 'CMD', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
-    { key = 'w', mods = 'CMD', action = wezterm.action.CloseCurrentPane { confirm = true } },
-}
+-- Keybindings (cross-platform)
+if is_windows then
+    config.keys = {
+        { key = 'd', mods = 'CTRL|SHIFT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+        { key = 'e', mods = 'CTRL|SHIFT', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+        { key = 'w', mods = 'CTRL|SHIFT', action = wezterm.action.CloseCurrentPane { confirm = true } },
+        { key = 'LeftArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ActivatePaneDirection 'Left' },
+        { key = 'RightArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ActivatePaneDirection 'Right' },
+        { key = 'UpArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ActivatePaneDirection 'Up' },
+        { key = 'DownArrow', mods = 'CTRL|SHIFT', action = wezterm.action.ActivatePaneDirection 'Down' },
+    }
+else
+    config.keys = {
+        { key = 'd', mods = 'CMD|SHIFT', action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' } },
+        { key = 'd', mods = 'CMD', action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' } },
+        { key = 'w', mods = 'CMD', action = wezterm.action.CloseCurrentPane { confirm = true } },
+    }
+end
 
 return config
