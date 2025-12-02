@@ -23,7 +23,7 @@ cd ~/Documents/dotfiles && ./install.sh
 - **Terminal**: WezTerm, MSYS2 (Windows)
 - **Editors**: Zed, Cursor, Helix
 - **Dev Tools**: Git, Rust, Node.js, Python, GitHub CLI
-- **AI**: Claude Desktop
+- **AI**: Claude 
 
 ### Configs
 - Shell: `.bashrc`, `.bash_profile`, `.aliases`, `.exports`

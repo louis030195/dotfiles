@@ -36,6 +36,7 @@ cp "$DOTFILES_DIR/git/.gitignore_global" ~/.gitignore
 git config --global core.excludesfile ~/.gitignore
 git config --global user.name "louis030195"
 git config --global user.email "louis.beaumont@gmail.com"
+git config --global core.longpaths true
 
 echo "Setting up wezterm..."
 mkdir -p ~/.config/wezterm

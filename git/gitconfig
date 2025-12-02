@@ -1,0 +1,13 @@
+[user]
+    name = Louis Beaumont
+    email = louis.beaumont@gmail.com
+
+[core]
+    longpaths = true
+    excludesfile = ~/.gitignore_global
+
+[init]
+    defaultBranch = master
+
+[pull]
+    rebase = false
