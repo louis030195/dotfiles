@@ -10,7 +10,28 @@ config.color_scheme = 'One Light (Gogh)'
 
 -- Window
 config.window_padding = { left = 4, right = 4, top = 4, bottom = 4 }
-config.hide_tab_bar_if_only_one_tab = true
+config.tab_bar_at_bottom = true
+config.use_fancy_tab_bar = false
+config.hide_tab_bar_if_only_one_tab = false
+
+-- Light tab bar colors
+config.colors = {
+    tab_bar = {
+        background = '#fafafa',
+        active_tab = {
+            bg_color = '#ffffff',
+            fg_color = '#383a42',
+        },
+        inactive_tab = {
+            bg_color = '#e5e5e5',
+            fg_color = '#696c77',
+        },
+        new_tab = {
+            bg_color = '#fafafa',
+            fg_color = '#383a42',
+        },
+    },
+}
 
 -- OS-specific shell
 local is_windows = wezterm.target_triple:find('windows') ~= nil
