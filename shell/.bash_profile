@@ -26,5 +26,3 @@ fi
 # Bash completion
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
-# Start in home directory
-cd ~

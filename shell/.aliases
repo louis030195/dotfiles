@@ -41,3 +41,35 @@ case "$(uname -s)" in
         alias open="xdg-open"
         ;;
 esac
+
+# Claude Code with all permissions
+alias cc="claude --dangerously-skip-permissions"
+alias claude="claude --dangerously-skip-permissions"
+
+# Quick directory jumps
+alias dt="cd ~/Desktop"
+alias dl="cd ~/Downloads"
+alias brain="cd ~/brain"
+alias t="cd ~/Documents/terminator"
+alias w="cd ~/Documents/workflows"
+alias m="cd ~/Documents/mediar-web-app"
+
+# Git faster
+alias gco="git checkout"
+alias gcb="git checkout -b"
+alias gpl="git pull"
+alias gst="git stash"
+alias gstp="git stash pop"
+alias gca="git commit --amend --no-edit"
+alias gpf="git push --force-with-lease"
+
+# Quick edit
+alias zed.="zed ."
+alias z.="zed ."
+
+# Misc
+alias cls="clear"
+alias h="history | tail -30"
+alias path='echo $PATH | tr ":" "\n"'
+alias now="date '+%Y-%m-%d %H:%M:%S'"
+alias week="date +%V"
