@@ -30,6 +30,7 @@ if command -v winget &> /dev/null; then
     winget install --id=Google.Chrome -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
 
     # CLI tools
+    winget install --id=jqlang.jq -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Oven-sh.Bun -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Supabase.CLI -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Microsoft.AzureCLI -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
