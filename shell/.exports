@@ -34,6 +34,9 @@ case "$(uname -s)" in
         export PATH="$HOME/AppData/Roaming/npm:$PATH"
         # WinGet packages (jq, etc)
         export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
+        # Hashicorp tools (Terraform, Packer)
+        export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/Hashicorp.Terraform_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
+        export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/Hashicorp.Packer_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
         ;;
     Linux)
         # Linux - CUDA if nvidia

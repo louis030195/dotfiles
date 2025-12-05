@@ -37,6 +37,8 @@ if command -v winget &> /dev/null; then
     winget install --id=Vercel.Vercel -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Docker.DockerDesktop -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
     winget install --id=Tailscale.Tailscale -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
+    winget install --id=Hashicorp.Terraform -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
+    winget install --id=Hashicorp.Packer -e --accept-source-agreements --accept-package-agreements 2>/dev/null || true
 else
     echo "winget not found - install Windows App Installer from Microsoft Store"
 fi
