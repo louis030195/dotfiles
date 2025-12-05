@@ -3,6 +3,7 @@
     email = louis.beaumont@gmail.com
 
 [core]
+    editor = hx
     longpaths = true
     excludesfile = ~/.gitignore_global
 

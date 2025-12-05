@@ -29,8 +29,11 @@ case "$(uname -s)" in
         # Windows (Git Bash / MSYS2)
         export PATH="/c/msys64/ucrt64/bin:$PATH"
         export PATH="/c/Program Files/nodejs:$PATH"
-        # npm global - use $USERPROFILE which works better in Git Bash
+        export PATH="/c/Program Files/TightVNC:$PATH"
+        # npm global
         export PATH="$HOME/AppData/Roaming/npm:$PATH"
+        # WinGet packages (jq, etc)
+        export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/jqlang.jq_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
         ;;
     Linux)
         # Linux - CUDA if nvidia
