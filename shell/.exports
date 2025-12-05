@@ -37,6 +37,8 @@ case "$(uname -s)" in
         # Hashicorp tools (Terraform, Packer)
         export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/Hashicorp.Terraform_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
         export PATH="$HOME/AppData/Local/Microsoft/WinGet/Packages/Hashicorp.Packer_Microsoft.Winget.Source_8wekyb3d8bbwe:$PATH"
+        # Google Cloud SDK
+        export PATH="$HOME/AppData/Local/Google/Cloud SDK/google-cloud-sdk/bin:$PATH"
         ;;
     Linux)
         # Linux - CUDA if nvidia
