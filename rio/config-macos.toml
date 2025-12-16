@@ -1,0 +1,55 @@
+# Font
+[fonts]
+family = "Cascadia Code"
+size = 14
+
+# Padding
+padding-x = 4
+padding-y = 4
+
+# Navigation (tabs)
+[navigation]
+mode = "BottomTab"
+
+# Shell (macOS)
+[shell]
+program = "/opt/homebrew/bin/bash"
+args = ["-l"]
+
+# One Light theme colors
+[colors]
+background = "#fafafa"
+foreground = "#383a42"
+cursor = "#526eff"
+tabs-active = "#ffffff"
+tabs = "#e5e5e5"
+
+[colors.normal]
+black = "#383a42"
+red = "#e45649"
+green = "#50a14f"
+yellow = "#c18401"
+blue = "#4078f2"
+magenta = "#a626a4"
+cyan = "#0184bc"
+white = "#fafafa"
+
+[colors.bright]
+black = "#696c77"
+red = "#e45649"
+green = "#50a14f"
+yellow = "#c18401"
+blue = "#4078f2"
+magenta = "#a626a4"
+cyan = "#0184bc"
+white = "#ffffff"
+
+# Keybindings (macOS - use CMD)
+[bindings]
+keys = [
+  { key = "d", with = "super | shift", action = "SplitRight" },
+  { key = "d", with = "super", action = "SplitDown" },
+  { key = "w", with = "super", action = "ClosePane" },
+  { key = "[", with = "super", action = "SelectPrevSplit" },
+  { key = "]", with = "super", action = "SelectNextSplit" },
+]
