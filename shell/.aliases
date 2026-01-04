@@ -81,7 +81,7 @@ encrypt() {
     echo ""
     read -p "Key ID: " keyid
     echo "Type message (Ctrl+D when done):"
-    cat | gpg --encrypt --armor --recipient "$keyid" | pbcopy
+    cat | gpg --encrypt --armor --trust-model always --recipient "$keyid" | pbcopy
     echo "Encrypted to clipboard"
 }
 alias gpgpub="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
