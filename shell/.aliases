@@ -67,6 +67,14 @@ alias gpf="git push --force-with-lease"
 alias zed.="zed ."
 alias z.="zed ."
 
+# GPG keys
+alias decrypt="pbpaste | gpg --decrypt"
+alias gpgpub="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
+alias pubkey="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
+alias mykey="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
+alias gpg-public="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
+alias showkey="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
+
 # Misc
 alias cls="clear"
 alias h="history | tail -30"
