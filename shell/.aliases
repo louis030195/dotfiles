@@ -69,9 +69,19 @@ alias z.="zed ."
 
 # GPG keys
 alias decrypt="pbpaste | gpg --decrypt"
+alias gpg-import="pbpaste | gpg --import"
 encrypt() {
+    keys=$(gpg --list-keys --keyid-format SHORT 2>/dev/null | grep -E "^pub" | awk '{print $2}')
+    if [ -z "$keys" ]; then
+        echo "No keys found. Copy a public key and run: gpg-import"
+        return 1
+    fi
+    echo "Available keys:"
+    gpg --list-keys --keyid-format SHORT 2>/dev/null | grep -E "^pub|uid"
+    echo ""
+    read -p "Key ID: " keyid
     echo "Type message (Ctrl+D when done):"
-    cat | gpg --encrypt --armor --recipient "$1" | pbcopy
+    cat | gpg --encrypt --armor --recipient "$keyid" | pbcopy
     echo "Encrypted to clipboard"
 }
 alias gpgpub="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
