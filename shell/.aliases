@@ -69,6 +69,11 @@ alias z.="zed ."
 
 # GPG keys
 alias decrypt="pbpaste | gpg --decrypt"
+encrypt() {
+    echo "Type message (Ctrl+D when done):"
+    cat | gpg --encrypt --armor --recipient "$1" | pbcopy
+    echo "Encrypted to clipboard"
+}
 alias gpgpub="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
 alias pubkey="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
 alias mykey="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
