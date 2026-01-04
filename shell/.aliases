@@ -80,8 +80,8 @@ encrypt() {
     gpg --list-keys --keyid-format SHORT 2>/dev/null | grep -E "^pub|uid"
     echo ""
     read -p "Key ID: " keyid
-    echo "Type message (Ctrl+D when done):"
-    cat | gpg --encrypt --armor --trust-model always --recipient "$keyid" | pbcopy
+    echo "Type message (type END on new line when done):"
+    sed '/^END$/q' | sed '/^END$/d' | gpg --encrypt --armor --trust-model always --recipient "$keyid" | pbcopy
     echo "Encrypted to clipboard"
 }
 alias gpgpub="cat ~/Library/Mobile\ Documents/com~apple~CloudDocs/gpg/new_public.asc"
