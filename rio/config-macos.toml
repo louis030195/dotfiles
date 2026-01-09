@@ -11,6 +11,27 @@ padding-y = 4
 [navigation]
 mode = "BottomTab"
 
+# Clickable URLs - Cmd+click or Ctrl+Shift+O
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.rules]]
+regex = "https?://[^\\s<>\"']+"
+hyperlinks = true
+post-processing = true
+persist = false
+
+[hints.rules.action]
+command = "open"
+
+[hints.rules.mouse]
+enabled = true
+mods = ["Super"]
+
+[hints.rules.binding]
+key = "O"
+mods = ["Control", "Shift"]
+
 # Shell (macOS)
 [shell]
 program = "/opt/homebrew/bin/bash"

@@ -1,3 +1,7 @@
+# Working directory (avoid starting in system32)
+working-dir = "C:/Users/louis030195/Documents"
+use-fork = true
+
 # Font
 [fonts]
 family = "Cascadia Code"
@@ -10,6 +14,27 @@ padding-y = 4
 # Navigation (tabs)
 [navigation]
 mode = "BottomTab"
+
+# Clickable URLs - Alt+click or Ctrl+Shift+O
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.rules]]
+regex = "https?://[^\\s<>\"']+"
+hyperlinks = true
+post-processing = true
+persist = false
+
+[hints.rules.action]
+command = { program = "cmd", args = ["/c", "start", ""] }
+
+[hints.rules.mouse]
+enabled = true
+mods = ["Alt"]
+
+[hints.rules.binding]
+key = "O"
+mods = ["Control", "Shift"]
 
 # Shell (Windows)
 [shell]
