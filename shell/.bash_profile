@@ -26,3 +26,6 @@ fi
 # Bash completion
 [ -f /etc/bash_completion ] && . /etc/bash_completion
 
+# Auto-clean Rust build artifacts older than 14 days (silent background)
+command -v cargo-sweep &>/dev/null && (nohup cargo sweep --recursive --time 14 ~/Documents &>/dev/null &) 2>/dev/null
+
