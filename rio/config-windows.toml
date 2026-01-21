@@ -1,6 +1,5 @@
 # Working directory (avoid starting in system32)
 working-dir = "C:/Users/louis030195/Documents"
-use-fork = true
 
 # Font
 [fonts]
