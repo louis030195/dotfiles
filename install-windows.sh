@@ -84,6 +84,12 @@ mkdir -p ~/.claude
 cp "$DOTFILES_DIR/claude/CLAUDE.md" ~/.claude/ 2>/dev/null || true
 cp "$DOTFILES_DIR/claude/settings.json" ~/.claude/ 2>/dev/null || true
 
+# Setup Windows Terminal
+echo "Setting up Windows Terminal..."
+WT_CONFIG_DIR="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState"
+mkdir -p "$WT_CONFIG_DIR"
+cp "$DOTFILES_DIR/windows-terminal/settings.json" "$WT_CONFIG_DIR/" 2>/dev/null || true
+
 echo "Windows setup complete!"
 echo ""
 echo "Manual steps:"

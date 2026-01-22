@@ -1,0 +1,166 @@
+{
+    "$help": "https://aka.ms/terminal-documentation",
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    "actions": [],
+    "copyFormatting": "none",
+    "copyOnSelect": false,
+    "defaultProfile": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+    "keybindings": 
+    [
+        {
+            "id": "Terminal.SplitPaneRight",
+            "keys": "ctrl+shift+\\"
+        },
+        {
+            "id": "Terminal.SplitPaneDown",
+            "keys": "ctrl+shift+minus"
+        },
+        {
+            "id": "Terminal.ClosePane",
+            "keys": "ctrl+d"
+        },
+        {
+            "id": "Terminal.MoveFocusRight",
+            "keys": "ctrl+shift+right"
+        },
+        {
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "ctrl+shift+left"
+        },
+        {
+            "id": "Terminal.MoveFocusUp",
+            "keys": "ctrl+shift+up"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "ctrl+shift+down"
+        },
+        {
+            "id": "Terminal.CopyToClipboard",
+            "keys": "ctrl+c"
+        },
+        {
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
+        },
+        {
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
+        },
+        {
+            "id": "Terminal.DecreaseFontSize",
+            "keys": "ctrl+minus"
+        },
+        {
+            "id": "Terminal.IncreaseFontSize",
+            "keys": "ctrl+plus"
+        },
+        {
+            "id": "Terminal.ResetFontSize",
+            "keys": "ctrl+0"
+        }
+    ],
+    "newTabMenu": 
+    [
+        {
+            "type": "remainingProfiles"
+        }
+    ],
+    "profiles": 
+    {
+        "defaults": 
+        {
+            "colorScheme": "One Light",
+            "font": 
+            {
+                "face": "Cascadia Mono",
+                "size": 14
+            },
+            "padding": "4",
+            "startingDirectory": "C:/Users/louis030195/Documents"
+        },
+        "list": 
+        [
+            {
+                "commandline": "C:/Program Files/Git/bin/bash.exe -l",
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "icon": "C:/Program Files/Git/mingw64/share/git/git-for-windows.ico",
+                "name": "Git Bash"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "hidden": false,
+                "name": "PowerShell"
+            },
+            {
+                "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "hidden": false,
+                "name": "Command Prompt"
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{17d2aaad-9917-5ec6-a4a2-571e89b2f96c}",
+                "hidden": true,
+                "name": "Developer Command Prompt for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            },
+            {
+                "guid": "{1d584d3b-4be3-52e1-b87a-49f0b1eeb460}",
+                "hidden": true,
+                "name": "Developer PowerShell for VS 2022",
+                "source": "Windows.Terminal.VisualStudio"
+            }
+        ]
+    },
+    "schemes": 
+    [
+        {
+            "background": "#FAFAFA",
+            "black": "#383A42",
+            "blue": "#4078F2",
+            "brightBlack": "#696C77",
+            "brightBlue": "#4078F2",
+            "brightCyan": "#0184BC",
+            "brightGreen": "#50A14F",
+            "brightPurple": "#A626A4",
+            "brightRed": "#E45649",
+            "brightWhite": "#FFFFFF",
+            "brightYellow": "#C18401",
+            "cursorColor": "#526EFF",
+            "cyan": "#0184BC",
+            "foreground": "#383A42",
+            "green": "#50A14F",
+            "name": "One Light",
+            "purple": "#A626A4",
+            "red": "#E45649",
+            "selectionBackground": "#BFCEFF",
+            "white": "#A0A1A7",
+            "yellow": "#C18401"
+        }
+    ],
+    "theme": "One Light App",
+    "themes": [
+        {
+            "name": "One Light App",
+            "tab": {
+                "background": "#FAFAFA",
+                "unfocusedBackground": "#E5E5E6"
+            },
+            "tabRow": {
+                "background": "#FAFAFA",
+                "unfocusedBackground": "#E5E5E6"
+            },
+            "window": {
+                "applicationTheme": "light"
+            }
+        }
+    ]
+}
