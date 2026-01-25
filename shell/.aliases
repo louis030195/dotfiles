@@ -47,6 +47,10 @@ esac
 alias cc="claude --dangerously-skip-permissions"
 alias claude="claude --dangerously-skip-permissions"
 
+# OpenCode
+alias opsh="~/.local/bin/opencode.exe"
+alias oc="~/.local/bin/opencode.exe"
+
 # Quick directory jumps
 alias dt="cd ~/Desktop"
 alias dl="cd ~/Downloads"

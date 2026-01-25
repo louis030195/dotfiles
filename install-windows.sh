@@ -59,6 +59,20 @@ fi
 # Install claude code
 npm install -g @anthropic-ai/claude-code 2>/dev/null || true
 
+# Install opencode
+echo "Installing OpenCode..."
+OPENCODE_VERSION="v1.1.35"
+mkdir -p ~/.local/bin
+curl -sL "https://github.com/sst/opencode/releases/download/${OPENCODE_VERSION}/opencode-windows-x64.exe" -o ~/.local/bin/opencode.exe
+chmod +x ~/.local/bin/opencode.exe
+
+# Setup shell dotfiles
+echo "Setting up shell dotfiles..."
+DOTFILES_DIR="${DOTFILES_DIR:-$HOME/Documents/dotfiles}"
+ln -sf "$DOTFILES_DIR/shell/.aliases" ~/.aliases
+ln -sf "$DOTFILES_DIR/shell/.exports" ~/.exports
+ln -sf "$DOTFILES_DIR/shell/.bash_profile" ~/.bash_profile
+
 # Setup Zed config
 echo "Setting up Zed..."
 ZED_CONFIG_DIR="$APPDATA/Zed"
